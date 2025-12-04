@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KavhDex - Easy Pokédex</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <h1 class="logo">KavhDex</h1>
+            <p class="tagline">Your Easy Pokédex</p>
+        </div>
+    </header>
+    <br>
+
+    <div class="container">
+        <!-- MAIN -->
+        <main>
+            <div class="sprite-box">
+                <img src="#" alt="Pokémon Image" id="sprite">
+            </div>
+            <section class="controls">
+                <form onsubmit="handleSubmit(); return false">
+                    <input type="text" id="pokemon" autocomplete="off" maxlength="20" placeholder="Insert Pokémon's name or Pokédex number">
+                </form>
+
+                <div class="controls-row">
+                    <span>Shiny:</span>
+                    <div>
+                        <input type="radio" name="shiny" value="true" id="shiny-yes">
+                        <label for="shiny-yes">Yes</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" name="shiny" value="false" id="shiny-no" checked>
+                        <label for="shiny-no">No</label>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button type="button" id="prev">Previous</button>
+                    <button type="button" id="next">Next</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- USER INTERACTIVITY -->
+        <aside class="info-card">
+            <div class="card">
+                <h2>
+                    <span id="name" translate="no" style="text-transform: capitalize"></span> -
+                    <span id="pokedexNumber"></span>
+                </h2>
+                <br>
+                <span>The <span id="genera"></span></span>
+                <p id="entry"></p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-sections">
+            <div>
+                <h4>My social media</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/kavhsao" target="_blank">Instagram</a></li>
+                    <li><a href="https://github.com/kv-aliaga" target="_blank">Github</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Other projects you may like</h4>
+                <a href="https://kv-aliaga.github.io/KavhFlix/" target="_blank">My other project (KavhFlix)</a>
+                <br>
+                <a href="https://pokeapi.co" target="_blank">Meet PokéAPI!</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 KavhDex/Kavhsao/Kv-Aliaga.</p>
+        </div>
+    </footer>
+
+    <!-- IMPORTING JAVASCRIPT -->
+    <script src="js/script.js"></script>
+</body>
+</html>
