@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
     <title>KavhDex - Easy Pokédex</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/kavhdex_logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/KavhDex.png" type="image/x-icon">
 </head>
 <body>
     <!-- HEADER -->
@@ -29,7 +29,7 @@
                 </form>
 
                 <div class="controls-row">
-                    <span>Shiny:</span>
+                    <span translate="no">Shiny:</span>
                     <div>
                         <input type="radio" name="shiny" value="true" id="shiny-yes">
                         <label for="shiny-yes">Yes</label>
@@ -60,6 +60,36 @@
                 <p id="entry"></p>
             </div>
         </aside>
+
+        <section class="controls theme-controls">
+            <div class="controls-row">
+                <span>Choose the theme</span>
+                <div>
+                    <input type="radio" name="theme" id="purple" value="purple">
+                    <label for="purple">Purple</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="theme" id="red" value="red">
+                    <label for="red">Red</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="theme" id="green" value="green" checked>
+                    <label for="green">Green</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="theme" id="blue" value="blue">
+                    <label for="blue">Blue</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="theme" id="yellow" value="yellow">
+                    <label for="yellow">Yellow</label>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- FOOTER -->
@@ -87,5 +117,6 @@
 
     <!-- IMPORTING JAVASCRIPT -->
     <script src="js/script.js"></script>
+    <script src="js/change_color.js"></script>
 </body>
 </html>

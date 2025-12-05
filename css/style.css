@@ -11,11 +11,11 @@
     --text-secondary: #7f7f7f;
     --text-link: #6285ff;
     --text-link-hover: #2847b2;
-    --text-accent: #b4dd1e;
+    --text-accent: var(--primary-green);
     --text-hover: #d4ff4a;
-    --state-normal: #3a3a3a;
-    --state-hover: #d4ff4a;
-    --state-disabled: #2e2e2e;
+    --state-normal: var(--support-dark);
+    --state-hover: var(--text-hover);
+    --state-disabled: var(--primary-light);
     --shadow: rgba(180, 221, 30, 0.1)
 }
 
@@ -32,7 +32,6 @@
 }
 
 body{
-    /*font-family: TODO google fonts*/;
     background-color: var(--primary-dark);
     color: var(--text-primary);
     line-height: 1.5;
@@ -72,6 +71,7 @@ header{
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'main info' 'main info' 'theme theme';
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -79,6 +79,10 @@ header{
     background-color: var(--primary-light);
     border-radius: 0 0 8px 8px;
     min-height: 500px;
+}
+
+main{
+    grid-area: main;
 }
 
 .sprite-box{
@@ -216,6 +220,11 @@ header{
     border-radius: 6px;
     font-size: 25px;
     padding: 20px;
+    grid-area: info;
+}
+
+.theme-controls{
+    grid-area: theme;
 }
 
 #name, #pokedexNumber{

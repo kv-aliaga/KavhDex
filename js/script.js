@@ -66,6 +66,7 @@ function getPokemon(nameOrId){
         pokemonName.innerText = normalizeNames(jsonPokemon.name)
         currentValue = jsonPokemon.id // updates current value
         pokedexNumber.innerText = '#' + currentValue.toString().padStart(3, '0')  // zeros to the left
+        sprite.alt = normalizeNames(jsonPokemon.name) + ' image'
         changeSprites(jsonPokemon)
 
         // getting pokedex entry json
