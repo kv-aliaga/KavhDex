@@ -10,6 +10,7 @@ const genera = document.getElementById('genera')
 const shinyRadios = document.querySelectorAll('input[name="shiny"]')
 const btnPrevious = document.getElementById('prev')
 const btnNext = document.getElementById('next')
+const btnRandom = document.getElementById('random-pokemon')
 let isShiny = document.querySelector('input[name="shiny"]:checked').value
 
 // creating variables
@@ -102,6 +103,11 @@ btnPrevious.addEventListener('click', () => {
     // if is smaller than the min, go to the max
     (currentValue <= 1) ? currentValue = maxPokedexNumber : currentValue --
     getPokemon(currentValue)
+})
+
+btnRandom.addEventListener('click', () => {
+    const randomPokemon = Math.floor(Math.random() * maxPokedexNumber) + 1
+    getPokemon(randomPokemon)
 })
 
 // shiny radio event listener
